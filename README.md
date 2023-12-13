@@ -64,7 +64,6 @@ The EPA AQS API has limits on some call parameters. Specifically, when we reques
 3. Run all cells in "Forecasting_and_Visuals.ipynb" in the order that they appear.
 
 4. Run all cells in "Future_Insights.ipynb" in the order that they appear
-5. 
 ## Intermediate Files Created Chronologically:
 
 1. 'data_with_distance.csv'
