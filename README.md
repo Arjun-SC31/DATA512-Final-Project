@@ -1,16 +1,8 @@
-# Project Part 1 - Common Analysis
+# Project Part 4
 
 ## Project Goals:
 
-The goal of this project is to assess, process, analyze, evaluate, project and visualize the "Combined Wildland fire datasets for the United States and Certain Territories" data, in addition to using the EPA AQI API for 
-AQI data for further evaluation. Through this project, the aim is to evaluate the situation in Cheyenne, WY. 
-
-I calculate my own smoke estimates from 1963 to 2020, and with this data, project the smoke estimates for Cheyenne
-from 2024 to 2049 using the SARIMAX model for time-series forecasting. 
-
-In addition, I also compare my estimates to that of the EPA AQI values to ascertain the degree of accuracy and 
-consistency in my calculation. Furthermore, through insightful visuals, I uncover insights and concerns with regard
-to the air quality and wildfires in Wyoming and the states in the vicinity. 
+Estimate the impact wildfires and the air quality have on the economic situation in Cheyenne, WY. Provide insights for the future.
 
 ## Terms of Use, License:
 
@@ -31,6 +23,8 @@ If you violate these terms, we may disable your account without notice (but we w
 1. Combined Wildland fire datasets for the United States and Certain Territories: https://www.sciencebase.gov/catalog/item/61aa537dd34eb622f699df81
 
 2. EPA Air Quality System API: https://aqs.epa.gov/aqsweb/documents/data_api.html
+
+3. Federal Reserve Bank of St.Louis: https://fred.stlouisfed.org/
 
 
 
@@ -69,7 +63,8 @@ The EPA AQS API has limits on some call parameters. Specifically, when we reques
 
 3. Run all cells in "Forecasting_and_Visuals.ipynb" in the order that they appear.
 
-
+4. Run all cells in "Future_Insights.ipynb" in the order that they appear
+5. 
 ## Intermediate Files Created Chronologically:
 
 1. 'data_with_distance.csv'
@@ -94,6 +89,11 @@ The EPA AQS API has limits on some call parameters. Specifically, when we reques
 
 11. "final_aqi_each_year.csv"
 
+## Files used for analysis
+
+1. "final_analysis_data.csv" consists of the EPA AQI values for Cheyenne, WY. It also contains some useful information about Cheyenne, WY obtained from the Federal Reserve Bank of St. Louis
+   (FRED), that has been included into it from the data collected from FRED. The data in this file is used for much of the time-series analysis and model building done in "Future_Insights.ipynb"
+   
 ## Issues worth considering:
 
 2. Issues with API timing out:
@@ -108,6 +108,3 @@ Please adhere to the following when using the API.
 
 Limit the size of queries. Our database contains billions of values and you may request more than you intend. If you are unsure of the amount of data, start small and work your way up. We request that you limit queries to 1,000,000 rows of data each. You can use the "observation count" field on the annualData service to determine how much data exists for a time-parameter-geography combination. If you have any questions or need advice, please contact us.
 Limit the frequency of queries. Our system can process a limited load. If scripting requests, please wait for one request to complete before submitting another and do not make more than 10 requests per minute. Also, we request a pause of 5 seconds between requests and adjust accordingly for response time and size.
-
-
-## Re
